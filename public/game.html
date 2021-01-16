@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Cloud Chameleon</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://unpkg.com/uhtml"></script>
+
+  <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+
+  <script src="/public/game.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 20px;
+      font-family: 'Acme', sans-serif;
+      user-select: none;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    #frame {
+      height: 100%;
+      overflow-y: auto;
+      padding-bottom: 20px;     
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: ghostwhite;
+    }
+
+    .title {
+      text-align: center;
+      margin: auto;
+      display: block;
+      color: #004d40;
+      text-shadow: 1px 1px #80cbc4;
+      text-decoration: none;
+      font-size: 60px;
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 20px;
+    }
+
+    li {
+      text-align: center;
+      font-size: 40px;
+      color: #afb42b;
+      text-shadow: 1px 1px #827717;
+    }
+
+    .highlight {
+      color: #827717;
+      text-shadow: 1px 1px #afb42b;
+    }
+
+    .notes {
+      font-size: 30px;
+      color: #afb42b;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .notes > span {
+      font-size: 30px;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    ::-moz-focus-inner {
+      border: 0;
+    }
+
+    ::-moz-focus-outer {
+      border: 0;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      border: none;
+      border-bottom: 2px solid #80cbc4;
+      font-size: 40px;
+      color: #555;
+      text-align: center;
+    }
+
+    .clickable {
+      color: #80cbc4;
+      text-shadow: 1px 1px #006064;
+    }
+
+    button {
+      outline: none;
+      background: none;
+      border: none;
+      display: block;
+      margin: auto;
+      font-size: 40px;
+      color: #80cbc4;
+      text-shadow: 1px 1px #006064;
+    }
+
+    .clickable:hover,
+    button:hover {
+      cursor: pointer
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="frame"></div>
+</body>
+
+</html>

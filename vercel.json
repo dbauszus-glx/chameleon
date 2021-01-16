@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "regions": [
+    "lhr1"
+  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "functions": {
+    "api/api.js": {
+      "includeFiles": "public/**"
+    }
+  },
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.ico"
+    },
+    {
+      "source": "/public/(.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/:game?",
+      "destination": "/api/api.js"
+    },
+    {
+      "source": "/",
+      "destination": "/api/api.js"
+    }
+  ]
+}
